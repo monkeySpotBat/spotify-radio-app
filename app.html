@@ -1,0 +1,103 @@
+<div class="spotify-radio-app">
+  <div class="spotify-header">
+    <!-- Logo entfernt -->
+    <h1>Spotify Radio</h1>
+    <div class="status-indicator" id="connectionStatus">Disconnected</div>
+  </div>
+  
+  <div class="content-container">
+    <div class="login-section" id="loginSection">
+      <p>Connect your Spotify account to enable music streaming through your vehicle's speakers</p>
+      <button id="loginButton" class="primary-button">Connect to Spotify</button>
+    </div>
+    
+    <div class="player-section" id="playerSection" style="display: none;">
+      <div class="now-playing">
+        <div class="album-art" id="albumArt">
+          <svg class="placeholder-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+        <div class="track-info">
+          <div id="trackName" class="track-name">Not Playing</div>
+          <div id="artistName" class="artist-name">-</div>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button id="prevButton" class="control-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="19 20 9 12 19 4 19 20"></polygon>
+            <line x1="5" y1="19" x2="5" y2="5"></line>
+          </svg>
+        </button>
+        
+        <button id="playPauseButton" class="control-button play-button">
+          <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+        
+        <button id="nextButton" class="control-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 4 15 12 5 20 5 4"></polygon>
+            <line x1="19" y1="5" x2="19" y2="19"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="progress-container">
+        <div id="progressTime" class="time current-time">0:00</div>
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <div id="durationTime" class="time duration">0:00</div>
+      </div>
+      
+      <div class="volume-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <input type="range" id="volumeSlider" min="0" max="100" value="80" class="volume-slider">
+      </div>
+    </div>
+    
+    <div class="status-section">
+      <div class="status-item">
+        <span class="status-label">Engine:</span>
+        <span id="engineStatus" class="status-value">Off</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">Ignition:</span>
+        <span id="ignitionStatus" class="status-value">Off</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">Camera:</span>
+        <span id="cameraStatus" class="status-value">Inside</span>
+      </div>
+    </div>
+    
+    <div class="settings-section">
+      <h3>Audio Settings</h3>
+      <div class="setting-item">
+        <label for="spatialToggle">Spatial Audio:</label>
+        <label class="toggle-switch">
+          <input type="checkbox" id="spatialToggle" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <button id="logoutButton" class="secondary-button">Disconnect</button>
+    <div class="version">v1.0.0</div>
+  </div>
+</div>

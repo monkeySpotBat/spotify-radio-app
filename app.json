@@ -1,0 +1,9 @@
+{
+  "name": "Spotify Radio",
+  "author": "SpotifyMod",
+  "version": "1.0.0",
+  "description": "Realistic Spotify music integration with spatial audio coming from car doors",
+  "directive": "spotify-radio",
+  "domElement": "<spotify-radio></spotify-radio>",
+  "css": "app.css"
+}
